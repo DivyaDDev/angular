@@ -14,6 +14,7 @@ export class ChildComponent implements OnInit {
     constructor(private route: ActivatedRoute) {}
     ngOnInit() {
       this.route.params.subscribe((params) => this.operation = params['operation']);
-      alert(this.operation)
+      if(this.operation)
+        alert(this.operation)
     }
   }
